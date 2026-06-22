@@ -1,0 +1,178 @@
+/* Zeroing browser layout parameters */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+/* Base Body Framework with deep galactic gradient scaling */
+body {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    overflow-x: hidden;
+}
+
+/* Premium Neo-Glassmorphic Container Mechanics */
+.welcome-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 50px 40px;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.welcome-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 198, 255, 0.3);
+}
+
+/* Pulsing Avatar Halo Layout */
+.avatar-ring {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 198, 255, 0.4);
+    position: relative;
+}
+
+.avatar-ring span {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+/* Typography Hierarchy Setup */
+.welcome-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b0bec5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.user-identity {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+/* Dual Status Badge Framework */
+.badge-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.secure-badge, .env-badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+
+.secure-badge {
+    background: rgba(0, 198, 255, 0.1);
+    color: #00c6ff;
+    border: 1px solid rgba(0, 198, 255, 0.25);
+}
+
+.env-badge {
+    background: rgba(0, 230, 118, 0.1);
+    color: #00e676;
+    border: 1px solid rgba(0, 230, 118, 0.25);
+}
+
+/* Text Block Layout */
+.repo-description {
+    font-size: 0.95rem;
+    color: #90a4ae;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+/* Modular Control Layout (Buttons) */
+.action-grid {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.action-btn {
+    flex: 1;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.github-link {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2);
+}
+
+.github-link:hover {
+    box-shadow: 0 6px 20px rgba(0, 198, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.email-link {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.email-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Detailed Footer Block */
+.card-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 20px;
+}
+
+.system-log {
+    font-size: 0.75rem;
+    color: #607d8b;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 6px;
+}
+
+.author-signature {
+    font-size: 0.85rem;
+    color: #00c6ff;
+    font-style: italic;
+    font-weight: 500;
+}
