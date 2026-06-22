@@ -25,7 +25,7 @@ body {
     -webkit-backdrop-filter: blur(16px) saturate(120%);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
-    padding: 50px 40px;
+    padding: 45px 40px;
     max-width: 550px;
     width: 100%;
     text-align: center;
@@ -40,28 +40,26 @@ body {
 
 /* Pulsing Avatar Halo Layout */
 .avatar-ring {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     background: linear-gradient(45deg, #00c6ff, #0072ff);
     border-radius: 50%;
-    margin: 0 auto 25px;
+    margin: 0 auto 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 30px rgba(0, 198, 255, 0.4);
-    position: relative;
 }
 
 .avatar-ring span {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 800;
     color: #ffffff;
-    letter-spacing: -1px;
 }
 
 /* Typography Hierarchy Setup */
 .welcome-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: #b0bec5;
     text-transform: uppercase;
@@ -73,11 +71,35 @@ body {
     font-size: 3rem;
     font-weight: 800;
     background: linear-gradient(to right, #00c6ff, #0072ff);
-    -webkit-background-clip: text; /* For Safari/Chrome prefix */
-    background-clip: text;         /* Standard property (VS Code warning dur karne ke liye) */
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     letter-spacing: -0.5px;
+}
+
+/* Live Clock Styling Panel */
+.clock-panel {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#live-time {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #00c6ff;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 10px rgba(0, 198, 255, 0.3);
+}
+
+#live-date {
+    font-size: 0.8rem;
+    color: #90a4ae;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
 }
 
 /* Dual Status Badge Framework */
@@ -113,7 +135,7 @@ body {
     font-size: 0.95rem;
     color: #90a4ae;
     line-height: 1.6;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     text-align: justify;
     text-align-last: center;
 }
@@ -122,7 +144,7 @@ body {
 .action-grid {
     display: flex;
     gap: 15px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .action-btn {
@@ -133,12 +155,14 @@ body {
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
 }
 
 .github-link {
     background: linear-gradient(45deg, #00c6ff, #0072ff);
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2);
+    border: none;
 }
 
 .github-link:hover {
