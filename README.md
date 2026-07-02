@@ -17,7 +17,7 @@ Originally started as a local environment test with a simple `index.html` file d
 
 ## 🏛️ Project Legacy & Evolution
 
-Every great developer starts with a single line of code. This repository documents my step-by-step transition and system maturity:
+Every great developer starts with a single line of code. This repository documents my step-by-step transition and system maturity from a single static page into a comprehensive ecosystem tracking my full-stack and artificial intelligence learning curve.
 
 ---
 
@@ -31,23 +31,38 @@ The repository consists of the following modular files that build the complete l
 
 ---
 
-## 🚀 Technical Stack Applied
+## 🚀 Technical Stack & Verified Skills Matrix
 
-- **Frontend Structure:** HTML5 (Semantic Layouts)
-- **Styling & Aesthetics:** CSS3 (Glassmorphism, Vendor Prefixes, Hardware-Accelerated Transitions)
-- **Scripting Engine:** Vanilla JavaScript ES6+ (DOM Manipulation, Interval Timers)
-- **Version Control:** Git & GitHub Workflow Ecosystem
+Yahan un sabhi technologies aur domains ki list hai jo maine explore, implement aur seekhi hain:
 
----
+### 💻 Core Programming & Scripting
 
-## 📊 Future Portfolio Extensions & Roadmap
+- **Languages:** Python, JavaScript, C++, C#, GDscript
+- **Web Fundamentals:** HTML5, CSS3
 
-This foundational gateway serves as the launching pad for my upcoming advanced implementations across these core data engineering fields:
+### 🧠 Data Science & Machine Learning Core
 
-- 📈 **Supervised Learning Foundations** — Multi-linear modeling loops, regularized matrices, and error analytics.
-- 🌲 **Ensemble Learning Frameworks** — Parallel tree bagging systems and boosted tree execution arrays (XGBoost).
-- 🤖 **Unsupervised Learning Core** — Non-linear dimensional reduction pipelines, PCA extraction, and manifold cluster mapping.
-- 🔤 **Natural Language Processing Modules** — Text tokenization arrays, semantic term vector matrices (TF-IDF), and cosine similarity metrics.
+- **Data Engineering:** Data Pre-processing, Data Visualization, SQL, Excel
+- **Libraries & Frameworks:** NumPy, Pandas, Seaborn, Matplotlib, Scikit-learn (Sklearn), Streamlit
+- **Foundational Modeling:** Supervised Learning, Unsupervised Learning, Ensemble Learning, DSA (Data Structures & Algorithms), Core Mathematical Concepts
+
+### 🤖 Advanced Artificial Intelligence & Deep Learning
+
+- **Computer Vision:** OpenCV
+- **Deep Learning Frameworks:** TensorFlow, Keras
+- **Neural Architectures:** ANN, DNN, CNN, RNN, LSTM, GRU
+- **Generative AI & LLMs:** Gen AI, Transformers, Large Language Models (LLM), OpenAI API, LangChain, LangGraph, Vector DBs, Intelligent AI Agents
+
+### ☁️ DevOps, Cloud & Deployment Infrastructure
+
+- **Containerization & Orchestration:** Docker, Kubernetes
+- **Cloud Services:** AWS (Amazon Web Services)
+- **Automation Pipeline:** CI/CD
+- **Backend Frameworks:** FastAPI
+
+### 🎮 Interactive Game Engineering
+
+- **Game Engines:** Unity, Godot
 
 ---
 
@@ -62,52 +77,3 @@ To execute this dynamic workspace interface smoothly on your local computer syst
 ---
 
 💡 _Maintained dynamically as a signature milestone. Engineered with passion by amirsohail100._
-2️⃣ 🧮 Streamlit Calculator ki Fixed README.md
-Markdown
-
-# 🧮 Interactive Streamlit Calculator Application
-
-Welcome to the **Streamlit Calculator** repository! This project features a clean, responsive, and dynamic web-based calculator built entirely using Python and the Streamlit framework.
-
-The application is designed to handle standard arithmetic computations through an intuitive user interface, serving as an excellent demonstration of deploying Python scripts into interactive web apps.
-
----
-
-## 🖥️ Application User Interface Preview
-
-Below is the live execution environment and UI interface of the calculator application from my local development workspace:
-
-<div align="center">
-  <img src="./screenshot.png" alt="Streamlit Calculator UI Preview" width="85%" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 1px solid #30363d;">
-  <p><i>Streamlit Web Interface — Dynamic Calculator Dashboard</i></p>
-</div>
-
----
-
-## 🛠️ Features & Core Functionality
-
-- **Arithmetic Execution Engine:** Supports addition, subtraction, multiplication, division, and modulo operations.
-- **Responsive Control Inputs:** Utilizes Streamlit's slider, numerical inputs, or custom button arrays for seamless data ingestion.
-- **Error & Exception Handling:** Built-in validation to prevent system crashes (e.g., handling explicit Division by Zero exceptions).
-- **Real-time Compiling:** Renders output arrays instantly upon value adjustments without manual page refreshes.
-
----
-
-## 💻 Tech Stack & Dependencies
-
-- **Language:** Python 3.10+
-- **Core Web Framework:** Streamlit
-- **Math Operations:** Standard Python Math Library
-
----
-
-## 🚀 How to Run and Test the Beta Locally
-
-Follow these basic guidelines to pull and launch the development workspace instantly:
-
-### 1. Clone and Enter the Repository
-
-```bash
-git clone [https://github.com/amirsohail100/amir-sohail.git](https://github.com/amirsohail100/amir-sohail.git)
-cd amir-sohail
-```
