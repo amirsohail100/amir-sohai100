@@ -9,10 +9,7 @@
 </head>
 <body>
 <div class="progress" id="progress"></div>
-<header class="nav"><a class="logo" href="#home">AS<span>.</span></a>
-  <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#top">Top Projects</a><a href="#projects">All Projects</a><a href="#contact" class="btn sm">Hire me</a></nav>
-</header>
-
+<div id="nav"></div>
 <main>
 <section id="home" class="hero">
   <div class="glow"></div>
@@ -40,31 +37,13 @@
 
 <div class="marquee"><div class="track" id="marquee"></div></div>
 
-<section id="about" class="wrap reveal">
-  <h3 class="sec">About me</h3>
-  <div class="about">
-    <p>I'm an AI engineer who likes taking ideas from a notebook to a live product. As Lead Developer at <b>Quadra</b> I build and host explainable ML software end to end: the model, the API, the interface and the deployment.</p>
-    <p>I work across the Python ML stack, LangChain / LangGraph agents and FastAPI backends, and I'm currently going deeper into <b>LLM fine-tuning</b>, <b>vector database architectures</b>, <b>AWS, Kubernetes</b> and <b>CI/CD</b>. I enjoy open-source collaboration on Generative AI and MLOps.</p>
-  </div>
-</section>
-
-<section id="skills" class="wrap reveal"><h3 class="sec">Skills by role</h3><div class="skills" id="skillGrid"></div></section>
-
-<section id="experience" class="wrap reveal"><h3 class="sec">Experience</h3><div class="timeline" id="timeline"></div></section>
-
-<section id="top" class="wrap reveal"><h3 class="sec">Top projects</h3><div class="featured" id="featured"></div></section>
-
-<section id="projects" class="wrap reveal"><h3 class="sec">All projects</h3>
-  <div class="filters" id="filters"></div><div class="grid" id="projectGrid"></div>
-</section>
-
-<section id="contact" class="wrap reveal"><div class="contact">
-  <h3>Let's build something together</h3>
-  <p>Open to roles, freelance work and open-source collaboration in Generative AI, LangChain / LangGraph and MLOps.</p>
-  <div class="cta"><a class="btn" href="mailto:amirsohail10@gmail.com">Email me</a><a class="btn ghost" href="https://linkedin.com/in/amir-sohail-ai" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" href="https://github.com/amirsohail100" target="_blank" rel="noopener">GitHub</a><a class="btn ghost" href="https://x.com/amirsohail2b" target="_blank" rel="noopener">X</a></div>
-</div></section>
+<section id="top" class="wrap reveal"><h3 class="sec">Top projects</h3><div class="featured" id="featured"></div>
+  <div class="more"><a class="btn ghost" href="projects.html">View all projects &rarr;</a></div></section>
+<section class="wrap reveal"><div class="contact"><h3>Let's build something together</h3><p>Open to roles, freelance work and open-source collaboration.</p>
+  <div class="cta"><a class="btn" href="contact.html">Get in touch</a><a class="btn ghost" href="about.html">More about me</a></div></div></section>
 </main>
-<footer>&copy; <span id="yr"></span> Amir Sohail &middot; amirsohail10@gmail.com</footer>
+<div id="foot"></div>
+<script src="projects-data.js" defer></script>
 <script src="script.js" defer></script>
 </body>
 </html>

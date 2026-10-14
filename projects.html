@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects | Amir Sohail</title>
+<meta name="description" content="Browse and search all projects by Amir Sohail.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div id="nav"></div>
+<main>
+<section class="wrap phead"><div class="glow"></div><p class="eyebrow"><i></i> Portfolio</p><h1>All projects</h1><p class="lead">Search by name, technology or type.</p></section>
+<section class="wrap"><div class="search"><input id="q" type="search" placeholder="Search projects by name, tech or type..." aria-label="Search projects" autocomplete="off"><span id="count"></span></div>
+  <div class="filters" id="filters"></div><div class="grid" id="projectGrid"></div>
+  <p class="empty" id="empty" hidden>No projects match your search. Try another word.</p></section>
+</main>
+<div id="foot"></div>
+<script src="projects-data.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
