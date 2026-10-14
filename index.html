@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome | amir sohail Core Gateway</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amir Sohail | Full-Stack AI Engineer</title>
+<meta name="description" content="Amir Sohail, Full-Stack AI Engineer and Lead Developer at Quadra. Agentic AI, GenAI, ML/DL and scalable web products.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="nav"><a class="logo" href="#home">AS<span>.</span></a>
+  <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#top">Top Projects</a><a href="#projects">All Projects</a><a href="#contact" class="btn sm">Hire me</a></nav>
+</header>
 
-    <div class="welcome-card">
-        
-        <div class="avatar-ring">
-            <span>A</span>
-        </div>
+<main>
+<section id="home" class="hero">
+  <div class="glow"></div>
+  <p class="eyebrow"><i></i> Open to opportunities &amp; collaboration</p>
+  <h1>Hi, I'm <em>Amir Sohail</em></h1>
+  <h2>Full-Stack AI Engineer &amp; Lead Developer @ Quadra</h2>
+  <p class="lead">I build agentic AI systems, GenAI applications and explainable ML models, then ship them as scalable web products.</p>
+  <div class="cta"><a class="btn" href="#top">View my work</a><a class="btn ghost" href="assets/Amir_Sohail_Resume.pdf" download>Download resume</a></div>
+  <div class="stats">
+    <div><b data-n="6000" data-s="+">0</b><span>GitHub contributions</span></div>
+    <div><b data-n="130" data-s="+">0</b><span>Pull requests</span></div>
+    <div><b data-n="5000" data-s="+">0</b><span>Commits</span></div>
+    <div><b data-n="3" data-s="">0</b><span>Featured projects</span></div>
+  </div>
+</section>
 
-        <h1 class="welcome-title" id="greeting-text">Welcome to My Gateway</h1>
-        <h2 class="user-identity">Amir</h2>
-        
-        <div class="clock-panel">
-            <div id="live-time">00:00:00 PM</div>
-            <div id="live-date">Loading Date...</div>
-        </div>
-        
-        <div class="badge-container">
-            <span class="secure-badge">👤 Username: amir-sohail</span>
-            <span class="env-badge">💻 Status: Local PC Verified</span>
-        </div>
+<section id="about" class="wrap reveal">
+  <h3 class="sec">About me</h3>
+  <div class="about">
+    <p>I'm an AI engineer who likes taking ideas from a notebook to a live product. As Lead Developer at <b>Quadra</b> I build and host explainable ML software end to end: the model, the API, the interface and the deployment.</p>
+    <p>I work across the Python ML stack, LangChain / LangGraph agents and FastAPI backends, and I'm currently going deeper into <b>LLM fine-tuning</b>, <b>vector database architectures</b>, <b>AWS, Kubernetes</b> and <b>CI/CD</b>. I enjoy open-source collaboration on Generative AI and MLOps.</p>
+  </div>
+</section>
 
-        <p class="repo-description">
-            You have successfully initialized and compiled the localized environment of my repository. This space acts as the primary baseline for my foundational codebase operations, version management, and open-source structures.
-        </p>
+<section id="skills" class="wrap reveal"><h3 class="sec">Skills by role</h3><div class="skills" id="skillGrid"></div></section>
 
-        <div class="action-grid">
-            <a href="https://github.com/amirsohail100" target="_blank" class="action-btn github-link">
-                Launch GitHub Hub
-            </a>
-            <a href="mailto:amirsoahil10@gmail.com" class="action-btn email-link">
-                Contact Author
-            </a>
-        </div>
+<section id="experience" class="wrap reveal"><h3 class="sec">Experience</h3><div class="timeline" id="timeline"></div></section>
 
-        <div class="card-footer">
-            <p class="system-log">System: JS Engine Operational & Compiled.</p>
-            <p class="author-signature">Author: amirsoahil10@gmail.com</p>
-        </div>
+<section id="top" class="wrap reveal"><h3 class="sec">Top projects</h3><div class="featured" id="featured"></div></section>
 
-    </div>
+<section id="projects" class="wrap reveal"><h3 class="sec">All projects</h3>
+  <div class="filters" id="filters"></div><div class="grid" id="projectGrid"></div>
+</section>
 
-    <script src="script.js" defer></script>
+<section id="contact" class="wrap reveal"><div class="contact">
+  <h3>Let's build something together</h3>
+  <p>Open to roles, freelance work and open-source collaboration in Generative AI, LangChain / LangGraph and MLOps.</p>
+  <div class="cta"><a class="btn" href="mailto:amirsohail10@gmail.com">Email me</a><a class="btn ghost" href="https://linkedin.com/in/amir-sohail-ai" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" href="https://github.com/amirsohail100" target="_blank" rel="noopener">GitHub</a><a class="btn ghost" href="https://x.com/amirsohail2b" target="_blank" rel="noopener">X</a></div>
+</div></section>
+</main>
+<footer>&copy; <span id="yr"></span> Amir Sohail &middot; amirsohail10@gmail.com</footer>
+<script src="script.js" defer></script>
 </body>
 </html>
