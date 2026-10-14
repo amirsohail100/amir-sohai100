@@ -67,3 +67,26 @@ document.querySelectorAll("[data-n]").forEach(el => {
   const t = setInterval(() => { v = Math.min(n, v + step); el.textContent = v.toLocaleString() + (v === n ? s : ""); if (v === n) clearInterval(t); }, 25);
 });
 $("#yr").textContent = new Date().getFullYear();
+
+/* ===== Polish: typing, marquee, progress, spotlight, tilt ===== */
+const ROLES = ["Full-Stack AI Engineer", "GenAI & Agentic AI Builder", "ML / DL Developer", "Lead Developer @ Quadra"];
+(function typer() {
+  const el = $("#typed"); let r = 0, c = 0, del = false;
+  (function tick() {
+    const w = ROLES[r]; el.textContent = w.slice(0, c);
+    if (!del && c === w.length) { del = true; return setTimeout(tick, 1400); }
+    if (del && c === 0) { del = false; r = (r + 1) % ROLES.length; }
+    c += del ? -1 : 1; setTimeout(tick, del ? 35 : 70);
+  })();
+})();
+const mq = Object.values(SKILLS).flat().map(t => `<span>${t}</span>`).join("");
+$("#marquee").innerHTML = mq + mq;
+addEventListener("scroll", () => { const h = document.documentElement; $("#progress").style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + "%"; }, { passive: true });
+if (matchMedia("(pointer:fine)").matches) {
+  const sp = document.createElement("div"); sp.className = "spot"; document.body.appendChild(sp);
+  addEventListener("mousemove", e => { sp.style.left = e.clientX + "px"; sp.style.top = e.clientY + "px"; });
+  document.querySelectorAll(".fp,.card").forEach(c => {
+    c.addEventListener("mousemove", e => { const r = c.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; c.style.transform = `perspective(1000px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateY(-4px)`; });
+    c.addEventListener("mouseleave", () => c.style.transform = "");
+  });
+}
