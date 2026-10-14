@@ -49,7 +49,7 @@ const shot = p => `<div class="shot" style="--g:${p.g}">${UIS[p.ui] || UIS.chat}
 
 $("#skillGrid").innerHTML = Object.entries(SKILLS).map(([k, v]) => `<div class="sk"><h4>${k}</h4><div class="chips">${chips(v)}</div></div>`).join("");
 $("#timeline").innerHTML = JOBS.map(j => `<div class="job"><h4>${j.role} · ${j.org}</h4><div class="meta">${j.when}</div><ul>${j.points.map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("");
-$("#featured").innerHTML = PROJECTS.filter(p => p.top).map(p => `<article class="fp">${shot(p)}<div class="info"><span class="tag">${p.tag}</span><h4>${p.name}</h4><p>${p.desc}</p><div class="chips">${chips(p.tech)}</div>${links(p)}</div></article>`).join("");
+$("#featured").innerHTML = PROJECTS.filter(p => p.top).map((p, i) => `<article class="fp">${shot(p)}<div class="meta2"><div><span class="num">0${i + 1}</span><h4>${p.name}</h4><span class="tag">${p.tag}</span></div><div><p>${p.desc}</p><div class="chips">${chips(p.tech)}</div>${links(p)}</div></div></article>`).join("");
 $("#projectGrid").innerHTML = PROJECTS.map(p => `<article class="card" data-cat="${p.cat}">${shot(p)}<div class="info"><span class="tag">${p.tag}</span><h4>${p.name}</h4><p>${p.desc}</p><div class="chips">${chips(p.tech)}</div>${links(p)}</div></article>`).join("");
 
 const cats = ["All", ...new Set(PROJECTS.map(p => p.cat))];
