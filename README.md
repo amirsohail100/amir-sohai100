@@ -1,87 +1,105 @@
-# 🌐 The Horizon Gateway: amirsohail100 Core Baseline System
+<div align="center">
 
-Welcome to the root workspace of my primary GitHub project hub. This repository holds immense value as it marks the exact baseline where my open-source software engineering journey began.
+# Amir Sohail | Portfolio
 
-Originally started as a local environment test with a simple `index.html` file displaying just my name, it has now been upgraded into a clean, modern, fully interactive dashboard utilizing a modular tri-file architecture (HTML5, CSS3, and JavaScript).
+**Full-Stack AI Engineer & Lead Developer @ Quadra**
 
----
+A fast, animated, multi-page portfolio built with plain HTML, CSS and JavaScript. No frameworks, no build step.
 
-## 🤵 Repository Host Details
+[**View live site**](https://amirsohail100.github.io/amir-sohail/) · [GitHub profile](https://github.com/amirsohail100) · [LinkedIn](https://linkedin.com/in/amir-sohail-ai)
 
-- **Author Name:** amir
-- **GitHub Alias:** amirsohail100
-- **Official Author Communication:** amirsoahil10@gmail.com
-- **Project Status:** Production Ready & Operational 🟢
+![Portfolio preview](assets/images/preview.png)
 
----
-
-## 🚀 Technical Stack & Verified Skills Matrix
-
-Here is a visual representation of my technical arsenal, spanning across Full-Stack Development, Data Science, Advanced AI, and DevOps:
-
-### 💻 Core Programming & Web
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-</p>
-
-### 🧠 Data Science & Machine Learning
-
-<p>
-  <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
-  <img src="https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib" />
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
-</p>
-
-### 🤖 Deep Learning, GenAI & Architectures
-
-<p>
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white" alt="Keras" />
-  <img src="https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" />
-</p>
-
-**Core AI Concepts:** `Generative AI` | `LLMs` | `Transformers` | `AI Agents` | `LangGraph` | `Vector DBs`  
-**Neural Networks:** `ANN` | `DNN` | `CNN` | `RNN` | `LSTM` | `GRU`  
-**ML Core:** `Supervised Learning` | `Unsupervised Learning` | `Ensemble Learning` | `Maths & DSA`
-
-### ☁️ DevOps, Cloud & Architecture
-
-<p>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
-  <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/CI%2FCD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="CI/CD" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL" />
-</p>
-
-### 🎮 Game Engineering
-
-<p>
-  <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity" />
-  <img src="https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godotengine&logoColor=white" alt="Godot" />
-</p>
+</div>
 
 ---
 
-## 🛠️ Quick Local Deployment Guide
+## Features
 
-To execute this dynamic workspace interface smoothly on your local computer system:
+- **Multi-page site:** Home, About, Projects, Project Detail and Contact, all sharing one navigation bar and footer.
+- **Top projects on Home**, and a dedicated **All Projects** page with live **search** and type filters.
+- **Data-driven projects:** every project is one object in `js/projects-data.js`. Add an object and it appears on the cards, in search and on its own detail page.
+- **Polished animations:** typing role text, animated avatar ring, skills marquee, scroll progress bar, scroll reveals, cursor spotlight and 3D card tilt (respects `prefers-reduced-motion`).
+- **Responsive** from phones to wide desktops.
+- **Zero dependencies:** opens by double-clicking `index.html`.
 
-1. Clone or download this complete repository branch onto your hard drive.
-2. Ensure `index.html`, `style.css`, and `script.js` reside securely within the **exact same folder**.
-3. Simply double-click on `index.html` to instantly compile and boot your premium welcome user terminal interface.
+## Pages
 
----
+| Page           | File                   | What it shows                           |
+| -------------- | ---------------------- | --------------------------------------- |
+| Home           | `index.html`           | Hero, skills strip, top projects        |
+| About          | `about.html`           | Summary, skills by role, experience     |
+| Projects       | `projects.html`        | All projects with search and filters    |
+| Project detail | `project.html?id=<id>` | One project: preview, highlights, links |
+| Contact        | `contact.html`         | Contact cards and message form          |
 
-💡 _Maintained dynamically as a signature milestone. Engineered with passion by amirsohail100._
+## Project structure
+
+```
+amir-sohail/
+├── index.html
+├── about.html
+├── projects.html
+├── project.html            # one template for every project (uses ?id=)
+├── contact.html
+├── favicon.svg
+├── css/
+│   └── style.css           # all styles and animations
+├── js/
+│   ├── projects-data.js    # all project objects (edit this to add projects)
+│   └── script.js           # shared nav/footer, rendering, search, effects
+├── assets/
+│   ├── images/             # avatar.png, preview.png
+│   └── resume/             # Amir_Sohail_Resume.pdf
+└── README.md
+```
+
+## Add a new project
+
+Open `js/projects-data.js` and add an object to the `PROJECTS` list:
+
+```js
+{
+  id: "my-project",              // unique slug, used in project.html?id=my-project
+  name: "My Project",
+  type: "AI",                    // filter chip and search ("AI", "ML", "Web" ...)
+  live: "https://...",           // live demo URL ("" hides the button)
+  repo: "https://github.com/amirsohail100/my-project",
+  keywords: ["chatbot", "llm"],  // extra words for search
+  top: true,                     // true = also shown on the Home page
+  tag: "GenAI · Chat",
+  desc: "One or two lines.",
+  features: ["Point one", "Point two"],
+  tech: ["Python", "LangChain"],
+  g: "linear-gradient(135deg,#6d28d9,#db2777)",
+  ui: "chat"                     // mockup style: quadra | chat | social
+}
+```
+
+## Run locally
+
+```bash
+git clone https://github.com/amirsohail100/amir-sohail.git
+cd amir-sohail
+# Option 1: double-click index.html
+# Option 2: serve it
+python -m http.server 8000      # then open http://localhost:8000
+```
+
+## Deploy
+
+Enable **GitHub Pages** from _Settings → Pages → Deploy from a branch → `main` / root_. The site goes live at `https://amirsohail100.github.io/amir-sohail/`.
+
+## Customize
+
+| To change                               | Edit                                       |
+| --------------------------------------- | ------------------------------------------ |
+| Projects                                | `js/projects-data.js`                      |
+| Skills, experience, typing roles, email | top of `js/script.js`                      |
+| Colors and fonts                        | `:root` variables in `css/style.css`       |
+| Profile photo                           | replace `assets/images/avatar.png`         |
+| Resume                                  | add `assets/resume/Amir_Sohail_Resume.pdf` |
+
+## Contact
+
+**Amir Sohail** · amirsohail10@gmail.com · [LinkedIn](https://linkedin.com/in/amir-sohail-ai) · [X](https://x.com/amirsohail2b)
