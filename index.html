@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="progress" id="progress"></div>
 <header class="nav"><a class="logo" href="#home">AS<span>.</span></a>
   <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#top">Top Projects</a><a href="#projects">All Projects</a><a href="#contact" class="btn sm">Hire me</a></nav>
 </header>
@@ -15,18 +16,29 @@
 <main>
 <section id="home" class="hero">
   <div class="glow"></div>
-  <p class="eyebrow"><i></i> Open to opportunities &amp; collaboration</p>
-  <h1>Hi, I'm <em>Amir Sohail</em></h1>
-  <h2>Full-Stack AI Engineer &amp; Lead Developer @ Quadra</h2>
-  <p class="lead">I build agentic AI systems, GenAI applications and explainable ML models, then ship them as scalable web products.</p>
-  <div class="cta"><a class="btn" href="#top">View my work</a><a class="btn ghost" href="assets/Amir_Sohail_Resume.pdf" download>Download resume</a></div>
-  <div class="stats">
-    <div><b data-n="6000" data-s="+">0</b><span>GitHub contributions</span></div>
-    <div><b data-n="130" data-s="+">0</b><span>Pull requests</span></div>
-    <div><b data-n="5000" data-s="+">0</b><span>Commits</span></div>
-    <div><b data-n="3" data-s="">0</b><span>Featured projects</span></div>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow"><i></i> Open to opportunities &amp; collaboration</p>
+      <h1>Hi, I'm <em>Amir Sohail</em></h1>
+      <h2><span id="typed"></span><span class="caret"></span></h2>
+      <p class="lead">Lead Developer @ Quadra. I build agentic AI systems, GenAI applications and explainable ML models, then ship them as scalable web products.</p>
+      <div class="cta"><a class="btn" href="#top">View my work</a><a class="btn ghost" href="assets/Amir_Sohail_Resume.pdf" download>Download resume</a></div>
+      <div class="stats">
+        <div><b data-n="6000" data-s="+">0</b><span>GitHub contributions</span></div>
+        <div><b data-n="130" data-s="+">0</b><span>Pull requests</span></div>
+        <div><b data-n="5000" data-s="+">0</b><span>Commits</span></div>
+        <div><b data-n="3" data-s="">0</b><span>Featured projects</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="orb"></div><div class="spin"></div>
+      <img class="avatar" src="assets/avatar.png" alt="Amir Sohail">
+      <span class="fl f1">Python</span><span class="fl f2">LangChain</span><span class="fl f3">FastAPI</span><span class="fl f4">Docker</span>
+    </div>
   </div>
 </section>
+
+<div class="marquee"><div class="track" id="marquee"></div></div>
 
 <section id="about" class="wrap reveal">
   <h3 class="sec">About me</h3>
