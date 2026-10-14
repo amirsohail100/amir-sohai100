@@ -95,3 +95,29 @@ footer{text-align:center;color:var(--mu);font-size:.85rem;padding:26px;border-to
 .meta2 .tag{font-size:.78rem;color:var(--ac);letter-spacing:1px;text-transform:uppercase}
 .meta2 p{color:var(--mu);margin-bottom:16px}.meta2 .chips{margin-bottom:18px}
 @media(max-width:820px){.meta2{grid-template-columns:1fr}.fp .shot{height:300px}.fp .win{width:74%}}
+
+/* ===== Polish: split hero, animated avatar, marquee, progress ===== */
+.hero{align-items:stretch;text-align:left;padding:130px 24px 70px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;max-width:1100px;margin:0 auto;width:100%}
+.hero .cta{justify-content:flex-start}.hero .lead{margin-left:0}
+.hero-grid .stats{max-width:none;margin-top:34px;gap:10px}.hero-grid .stats b{font-size:1.5rem}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--ac);margin-left:3px;vertical-align:-3px;animation:pulse 1s steps(2) infinite}
+.hero-art{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:460px;margin:0 auto;width:100%}
+.hero-art .avatar{position:relative;width:74%;border-radius:50%;box-shadow:0 30px 70px rgba(0,0,0,.55);animation:bob 6s ease-in-out infinite}
+.hero-art .spin{position:absolute;inset:6%;border-radius:50%;background:conic-gradient(from 0deg,var(--ac),transparent 30%,var(--ac2),transparent 65%,var(--ac));-webkit-mask:radial-gradient(circle,transparent 66%,#000 67%);mask:radial-gradient(circle,transparent 66%,#000 67%);animation:rot 9s linear infinite;opacity:.9}
+.hero-art .orb{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.35),transparent 70%);filter:blur(30px);animation:pulse 4s infinite}
+.fl{position:absolute;padding:7px 14px;border-radius:30px;font-size:.8rem;font-weight:600;background:rgba(14,21,32,.85);border:1px solid var(--line);backdrop-filter:blur(8px);box-shadow:0 10px 30px rgba(0,0,0,.4);animation:bob 5s ease-in-out infinite}
+.f1{top:10%;left:2%}.f2{top:18%;right:-2%;animation-delay:-1.5s}.f3{bottom:16%;left:-2%;animation-delay:-3s}.f4{bottom:8%;right:4%;animation-delay:-4s}
+@keyframes bob{50%{transform:translateY(-12px)}}
+@keyframes rot{to{transform:rotate(360deg)}}
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;gap:42px;width:max-content;animation:scroll 35s linear infinite;color:var(--mu);font-weight:600;letter-spacing:1px;white-space:nowrap}
+.track span:nth-child(3n){color:var(--ac)}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:30;background:linear-gradient(90deg,var(--ac),var(--ac2))}
+.spot{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(34,211,238,.09),transparent 65%);transform:translate(-50%,-50%)}
+.fp,.card{transform-style:preserve-3d;will-change:transform}
+.hero-text>*{animation:rise .8s both}.hero-text>*:nth-child(2){animation-delay:.1s}.hero-text>*:nth-child(3){animation-delay:.2s}.hero-text>*:nth-child(4){animation-delay:.3s}.hero-text>*:nth-child(5){animation-delay:.4s}.hero-text>*:nth-child(6){animation-delay:.5s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-art{order:-1;max-width:300px}.hero{text-align:center}.hero .cta{justify-content:center}.hero-grid .stats{grid-template-columns:repeat(2,1fr)}}
