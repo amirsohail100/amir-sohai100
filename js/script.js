@@ -13,28 +13,42 @@ const JOBS = [{ role: "Lead Developer", org: "Quadra", when: "Present", points: 
   "Built explainable predictions with SHAP so every verdict can be justified.",
   "Serve the FastAPI backend and the UI from one server, and host the platform live."] }];
 const ROLES = ["Full-Stack AI Engineer", "GenAI & Agentic AI Builder", "ML / DL Developer", "Lead Developer @ Quadra"];
+const ROOT = document.body.dataset.root || "";
+/* Logos from the Simple Icons CDN: [hex colour, slug, optional fallback slug]. No entry = text only. */
+const ICONS = {
+  "Python":["4B8BBE","python"],"C":["A8B9CC","c"],"C++":["659AD2","cplusplus"],"C#":["A179DC","csharp"],"JavaScript":["F7DF1E","javascript"],"HTML5":["E34F26","html5"],"CSS3":["2965F1","css3","css"],"PowerShell":["5391FE","powershell"],
+  "PyTorch":["EE4C2C","pytorch"],"TensorFlow":["FF6F00","tensorflow"],"Keras":["FF4B4B","keras"],"scikit-learn":["F7931E","scikitlearn"],"NumPy":["4DABCF","numpy"],"Pandas":["8F7BE8","pandas"],"Matplotlib":["3A8DC9","matplotlib"],"Plotly":["7A8CC2","plotly"],"MLflow":["0194E2","mlflow"],"OpenCV":["8C7BFF","opencv"],"Power BI":["F2C811","powerbi"],
+  "LangChain":["1C9C8C","langchain"],"LangGraph":["1C9C8C","langgraph","langchain"],"OpenAI API":["FFFFFF","openai"],"Mistral AI":["FA520F","mistralai"],"Streamlit":["FF4B4B","streamlit"],
+  "FastAPI":["009688","fastapi"],"Flask":["FFFFFF","flask"],"Node.js":["5FA04E","nodedotjs"],".NET":["8A6CFF","dotnet"],
+  "AWS":["FF9900","amazonaws","amazonwebservices"],"Google Cloud":["4285F4","googlecloud"],"Docker":["2496ED","docker"],"Kubernetes":["326CE5","kubernetes"],"GitHub Actions":["2088FF","githubactions"],"GitLab CI":["FC6D26","gitlab"],"CI/CD":["2088FF","githubactions"],
+  "Git":["F05032","git"],"GitHub":["FFFFFF","github"],"GitLab":["FC6D26","gitlab"],"MySQL":["5C9BD1","mysql"],"MongoDB":["47A248","mongodb"],"Unity":["FFFFFF","unity"],"Godot":["478CBF","godotengine"]
+};
+const logo = n => { const i = ICONS[n]; return i ? `<img class="lg" alt="" loading="lazy" src="https://cdn.simpleicons.org/${i[1]}/${i[0]}" data-n="${n}" data-i="1">` : ""; };
+const skillChips = a => a.map(t => `<span class="chip">${logo(t)}${t}</span>`).join("");
 const EMAIL = "amirsohail10@gmail.com";
 
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 const byId = Object.fromEntries(PROJECTS.map(p => [p.id, p]));
-const bar = '<div class="bar"><i></i><i></i><i></i></div>';
-const UIS = {
-  quadra: `<div class="win">${bar}<div class="body"><div class="gauge"><b>LOW RISK</b></div><div class="row"><span>Income</span><u style="--w:78%"></u></div><div class="row"><span>Credit history</span><u style="--w:64%"></u></div><div class="row"><span>Loan amount</span><u style="--w:40%"></u></div></div></div>`,
-  chat: `<div class="win">${bar}<div class="body"><div class="av"><i></i><i></i><i></i><i></i><i></i></div><div class="bub">Pick a persona to start chatting</div><div class="bub me">Give me career advice</div><div class="bub">Sure, let's begin...</div></div></div>`,
-  social: `<div class="win">${bar}<div class="body"><div class="row"><span>Article</span><u style="--w:100%"></u></div><div class="row"><span></span><u style="--w:70%"></u></div><div class="pl"><em>LinkedIn</em><em>X</em><em>Instagram</em></div><div class="bub">Ready-to-post content generated</div></div></div>`
-};
 const chips = a => (a || []).map(t => `<span class="chip">${t}</span>`).join("");
-const detail = p => `project.html?id=${encodeURIComponent(p.id)}`;
+const detail = p => `${ROOT}pages/project.html?id=${encodeURIComponent(p.id)}`;
 const links = p => `<div class="links"><a class="btn ghost" href="${detail(p)}">Details</a>${p.live ? `<a class="btn" href="${p.live}" target="_blank" rel="noopener">Live demo</a>` : ""}${p.repo ? `<a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener">Source code</a>` : ""}</div>`;
-const shot = p => `<a class="shot" href="${detail(p)}" style="--g:${p.g}" aria-label="${p.name}">${UIS[p.ui] || UIS.chat}</a>`;
+const ph = n => `<div class="ph">${n}</div>`;
+const shotInner = p => p.image ? `<img src="${ROOT}${p.image}" alt="${p.name} screenshot" loading="lazy">` : ph(p.name);
+const shot = p => `<a class="shot" href="${detail(p)}" style="--g:${p.g}" aria-label="${p.name}">${shotInner(p)}</a>`;
+/* if a project image or logo fails to load: placeholder for images, text-only (or fallback slug) for logos */
+document.addEventListener("error", e => {
+  const t = e.target; if (!t.matches) return;
+  if (t.matches(".shot img")) { const d = document.createElement("div"); d.className = "ph"; d.textContent = t.alt.replace(" screenshot", ""); t.replaceWith(d); }
+  else if (t.matches(".lg")) { const l = ICONS[t.dataset.n], k = +t.dataset.i + 1; if (l && l[k]) { t.dataset.i = k; t.src = `https://cdn.simpleicons.org/${l[k]}/${l[0]}`; } else t.remove(); }
+}, true);
 const card = p => `<article class="card" data-id="${p.id}">${shot(p)}<div class="info"><span class="tag">${p.tag || p.type}</span><h4><a href="${detail(p)}">${p.name}</a></h4><p>${p.desc}</p><div class="chips">${chips(p.tech)}</div>${links(p)}</div></article>`;
 const feat = (p, i) => `<article class="fp">${shot(p)}<div class="meta2"><div><span class="num">0${i + 1}</span><h4>${p.name}</h4><span class="tag">${p.tag || p.type}</span></div><div><p>${p.desc}</p><div class="chips">${chips(p.tech)}</div>${links(p)}</div></div></article>`;
 
 /* ---- shared layout: nav + footer ---- */
-const PAGES = [["index.html", "Home"], ["about.html", "About"], ["projects.html", "Projects"], ["contact.html", "Contact"]];
+const PAGES = [["index.html", "Home"], ["pages/about.html", "About"], ["pages/projects.html", "Projects"], ["pages/contact.html", "Contact"]];
 const cur = location.pathname.split("/").pop() || "index.html";
-const on = f => f === cur || (cur === "project.html" && f === "projects.html") ? ' class="on"' : "";
-$("#nav").outerHTML = `<header class="nav"><a class="logo" href="index.html">AS<span>.</span></a><nav>${PAGES.map(([f, n]) => `<a href="${f}"${on(f)}>${n}</a>`).join("")}<a href="contact.html" class="btn sm">Hire me</a></nav></header>`;
+const on = f => { const n = f.split("/").pop(); return n === cur || (cur === "project.html" && n === "projects.html") ? ' class="on"' : ""; };
+$("#nav").outerHTML = `<header class="nav"><a class="logo" href="${ROOT}index.html">AS<span>.</span></a><nav>${PAGES.map(([f, n]) => `<a href="${ROOT}${f}"${on(f)}>${n}</a>`).join("")}<a href="${ROOT}pages/contact.html" class="btn sm">Hire me</a></nav></header>`;
 $("#foot").outerHTML = `<footer>&copy; ${new Date().getFullYear()} Amir Sohail &middot; ${EMAIL}<br><a href="https://github.com/amirsohail100" target="_blank" rel="noopener">GitHub</a> &middot; <a href="https://linkedin.com/in/amir-sohail-ai" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://x.com/amirsohail2b" target="_blank" rel="noopener">X</a></footer>`;
 
 /* ---- Home ---- */
@@ -48,14 +62,14 @@ if ($("#typed")) (function typer() {
     c += del ? -1 : 1; setTimeout(tick, del ? 35 : 70);
   })();
 })();
-if ($("#marquee")) { const m = Object.values(SKILLS).flat().map(t => `<span>${t}</span>`).join(""); $("#marquee").innerHTML = m + m; }
+if ($("#marquee")) { const m = Object.values(SKILLS).flat().map(t => `<span>${logo(t)}${t}</span>`).join(""); $("#marquee").innerHTML = m + m; }
 $$("[data-n]").forEach(el => {
   const n = +el.dataset.n === 3 ? PROJECTS.filter(p => p.top).length : +el.dataset.n, s = el.dataset.s; let v = 0; const step = Math.max(1, Math.ceil(n / 60));
   const t = setInterval(() => { v = Math.min(n, v + step); el.textContent = v.toLocaleString() + (v === n ? s : ""); if (v === n) clearInterval(t); }, 25);
 });
 
 /* ---- About ---- */
-if ($("#skillGrid")) $("#skillGrid").innerHTML = Object.entries(SKILLS).map(([k, v]) => `<div class="sk"><h4>${k}</h4><div class="chips">${chips(v)}</div></div>`).join("");
+if ($("#skillGrid")) $("#skillGrid").innerHTML = Object.entries(SKILLS).map(([k, v]) => `<div class="sk"><h4>${k}</h4><div class="chips">${skillChips(v)}</div></div>`).join("");
 if ($("#timeline")) $("#timeline").innerHTML = JOBS.map(j => `<div class="job"><h4>${j.role} · ${j.org}</h4><div class="meta">${j.when}</div><ul>${j.points.map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("");
 
 /* ---- All projects: search + filter ---- */
@@ -87,7 +101,7 @@ if ($("#detail")) {
     document.title = `${p.name} | Amir Sohail`;
     const more = PROJECTS.filter(x => x.id !== p.id).slice(0, 3);
     $("#detail").innerHTML = `<div class="wrap dwrap"><a class="back" href="projects.html">&larr; All projects</a>
-      <div class="shot big" style="--g:${p.g}">${UIS[p.ui] || UIS.chat}</div>
+      <div class="shot big" style="--g:${p.g}">${shotInner(p)}</div>
       <div class="meta2"><div><span class="tag">${p.tag || p.type}</span><h1>${p.name}</h1><div class="chips">${chips(p.tech)}</div></div>
       <div><p class="lead">${p.desc}</p><h4 class="mini">Highlights</h4><ul class="feat">${(p.features || []).map(f => `<li>${f}</li>`).join("")}</ul>
       <div class="links">${p.live ? `<a class="btn" href="${p.live}" target="_blank" rel="noopener">Live demo</a>` : ""}${p.repo ? `<a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener">Source code</a>` : ""}</div></div></div>

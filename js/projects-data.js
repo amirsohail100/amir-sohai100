@@ -12,8 +12,9 @@
      desc      short description (cards)
      features  bullet points shown on the project detail page
      tech      technology chips
-     g         card background gradient
-     ui        mockup style: "quadra" | "chat" | "social"
+     image     path to the project screenshot inside assets/ui/ (same path on every page)
+               e.g. "assets/ui/quadra-credit-ledger.png". Leave "" to show a name placeholder.
+     g         placeholder background gradient (shown until the image is added)
    ========================================================================== */
 const PROJECTS = [
   {
@@ -28,7 +29,7 @@ const PROJECTS = [
       "SHAP explanations show why each verdict was given",
       "FastAPI backend and UI served from the same server, one command to run locally"
     ],
-    tech: ["Python", "FastAPI", "SHAP", "ML"], g: "linear-gradient(135deg,#0f766e,#1d4ed8)", ui: "quadra"
+    tech: ["Python", "FastAPI", "SHAP", "ML"], image: "assets/ui/quadra-credit-ledger.png", g: "linear-gradient(135deg,#0f766e,#1d4ed8)"
   },
   {
     id: "personachat-vip-studio", name: "PersonaChat VIP Studio", type: "AI",
@@ -42,7 +43,7 @@ const PROJECTS = [
       "Optimized memory window keeps conversations coherent while limiting context size",
       "Built with Streamlit, LangChain and Mistral AI"
     ],
-    tech: ["Python", "Streamlit", "LangChain", "Mistral AI"], g: "linear-gradient(135deg,#6d28d9,#db2777)", ui: "chat"
+    tech: ["Python", "Streamlit", "LangChain", "Mistral AI"], image: "assets/ui/personachat-vip-studio.png", g: "linear-gradient(135deg,#6d28d9,#db2777)"
   },
   {
     id: "tweetify-ai", name: "Tweetify AI", type: "AI",
@@ -55,13 +56,13 @@ const PROJECTS = [
       "Targets LinkedIn, X (Twitter) and Instagram",
       "Ready-to-publish output, no manual rewriting"
     ],
-    tech: ["Python", "GenAI", "LLMs"], g: "linear-gradient(135deg,#0369a1,#0891b2)", ui: "social"
+    tech: ["Python", "GenAI", "LLMs"], image: "assets/ui/tweetify-ai.png", g: "linear-gradient(135deg,#0369a1,#0891b2)"
   }
   /* Copy this block to add a project (keep the comma between objects):
   ,{
     id: "my-project", name: "My Project", type: "Web",
     live: "", repo: "", keywords: ["word1", "word2"],
     top: false, tag: "Category", desc: "One or two lines.", features: ["Point one"],
-    tech: ["HTML", "CSS"], g: "linear-gradient(135deg,#334155,#0f172a)", ui: "chat"
+    tech: ["HTML", "CSS"], image: "assets/ui/personachat-vip-studio.png", g: "linear-gradient(135deg,#334155,#0f172a)"
   } */
 ];
