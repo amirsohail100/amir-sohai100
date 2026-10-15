@@ -103,7 +103,7 @@ if ($("#detail")) {
     $("#detail").innerHTML = `<div class="wrap dwrap"><a class="back" href="projects.html">&larr; All projects</a>
       <div class="shot big" style="--g:${p.g}">${shotInner(p)}</div>
       <div class="meta2"><div><span class="tag">${p.tag || p.type}</span><h1>${p.name}</h1><div class="chips">${chips(p.tech)}</div></div>
-      <div><p class="lead">${p.desc}</p><h4 class="mini">Highlights</h4><ul class="feat">${(p.features || []).map(f => `<li>${f}</li>`).join("")}</ul>
+      <div><p class="lead">${p.desc}</p>${(p.features || []).length ? `<h4 class="mini">Highlights</h4><ul class="feat">${p.features.map(f => `<li>${f}</li>`).join("")}</ul>` : ""}
       <div class="links">${p.live ? `<a class="btn" href="${p.live}" target="_blank" rel="noopener">Live demo</a>` : ""}${p.repo ? `<a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener">Source code</a>` : ""}</div></div></div>
       ${more.length ? `<h3 class="sec">More projects</h3><div class="grid">${more.map(card).join("")}</div>` : ""}</div>`;
   }
