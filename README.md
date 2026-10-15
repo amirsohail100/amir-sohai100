@@ -25,32 +25,34 @@ A fast, animated, multi-page portfolio built with plain HTML, CSS and JavaScript
 
 ## Pages
 
-| Page           | File                   | What it shows                           |
-| -------------- | ---------------------- | --------------------------------------- |
-| Home           | `index.html`           | Hero, skills strip, top projects        |
-| About          | `about.html`           | Summary, skills by role, experience     |
-| Projects       | `projects.html`        | All projects with search and filters    |
-| Project detail | `project.html?id=<id>` | One project: preview, highlights, links |
-| Contact        | `contact.html`         | Contact cards and message form          |
+| Page           | File                         | What it shows                           |
+| -------------- | ---------------------------- | --------------------------------------- |
+| Home           | `index.html`                 | Hero, skills strip, top projects        |
+| About          | `pages/about.html`           | Summary, skills by role, experience     |
+| Projects       | `pages/projects.html`        | All projects with search and filters    |
+| Project detail | `pages/project.html?id=<id>` | One project: preview, highlights, links |
+| Contact        | `pages/contact.html`         | Contact cards and message form          |
 
 ## Project structure
 
 ```
 amir-sohail/
-├── index.html
-├── about.html
-├── projects.html
-├── project.html            # one template for every project (uses ?id=)
-├── contact.html
+├── index.html                  # Home (stays in the root)
 ├── favicon.svg
+├── pages/
+│   ├── about.html
+│   ├── projects.html           # all projects with search and filters
+│   ├── project.html            # one template for every project (uses ?id=)
+│   └── contact.html
 ├── css/
-│   └── style.css           # all styles and animations
+│   └── style.css               # all styles and animations
 ├── js/
-│   ├── projects-data.js    # all project objects (edit this to add projects)
-│   └── script.js           # shared nav/footer, rendering, search, effects
+│   ├── projects-data.js        # all project objects (edit this to add projects)
+│   └── script.js               # shared nav/footer, rendering, search, effects
 ├── assets/
-│   ├── images/             # avatar.png, preview.png
-│   └── resume/             # Amir_Sohail_Resume.pdf
+│   ├── images/                 # avatar.png, preview.png
+│   ├── ui/                     # project screenshots (paths set in projects-data.js)
+│   └── resume/                 # Amir_Sohail_Resume.pdf
 └── README.md
 ```
 
@@ -71,8 +73,8 @@ Open `js/projects-data.js` and add an object to the `PROJECTS` list:
   desc: "One or two lines.",
   features: ["Point one", "Point two"],
   tech: ["Python", "LangChain"],
-  g: "linear-gradient(135deg,#6d28d9,#db2777)",
-  ui: "chat"                     // mockup style: quadra | chat | social
+  image: "assets/ui/my-project.png",  // screenshot in assets/ui/ ("" shows a name placeholder)
+  g: "linear-gradient(135deg,#6d28d9,#db2777)"  // placeholder background
 }
 ```
 
@@ -88,17 +90,22 @@ python -m http.server 8000      # then open http://localhost:8000
 
 ## Deploy
 
-Enable **GitHub Pages** from _Settings → Pages → Deploy from a branch → `main` / root_. The site goes live at `https://amirsohail100.github.io/amir-sohail/`.
+**Render (Static Site):** create a new Static Site from this repo, leave the build command empty and set the publish directory to `.`.
+
+**GitHub Pages:** enable from _Settings → Pages → Deploy from a branch → `main` / root_. The site goes live at `https://amirsohail100.github.io/amir-sohail/`.
+
+Skill logos on the Home marquee and About page come from the [Simple Icons](https://simpleicons.org) CDN and are mapped in `ICONS` at the top of `js/script.js`.
 
 ## Customize
 
-| To change                               | Edit                                       |
-| --------------------------------------- | ------------------------------------------ |
-| Projects                                | `js/projects-data.js`                      |
-| Skills, experience, typing roles, email | top of `js/script.js`                      |
-| Colors and fonts                        | `:root` variables in `css/style.css`       |
-| Profile photo                           | replace `assets/images/avatar.png`         |
-| Resume                                  | add `assets/resume/Amir_Sohail_Resume.pdf` |
+| To change                               | Edit                                                                |
+| --------------------------------------- | ------------------------------------------------------------------- |
+| Projects                                | `js/projects-data.js`                                               |
+| Skills, experience, typing roles, email | top of `js/script.js`                                               |
+| Colors and fonts                        | `:root` variables in `css/style.css`                                |
+| Project screenshots                     | add images to `assets/ui/` and set `image` in `js/projects-data.js` |
+| Profile photo                           | replace `assets/images/avatar.png`                                  |
+| Resume                                  | add `assets/resume/Amir_Sohail_Resume.pdf`                          |
 
 ## Contact
 
