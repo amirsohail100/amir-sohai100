@@ -108,6 +108,36 @@ const PROJECTS = [
     image: "assets/ui/campusflow-langgraph.png", g: "linear-gradient(135deg,#0f766e,#1d4ed8)"
   },
   {
+    id: "quizgenie-ai", name: "QuizGenie AI", type: "AI",
+    live: "", repo: "https://github.com/amirsohail100/QuizGenie-AI",
+    keywords: ["quiz", "mcq", "test", "education", "llm", "langchain", "mistral", "streamlit"],
+    top: false, tag: "GenAI · Education",
+    desc: "An intelligent, LLM-powered test generation and evaluation platform built with LangChain, Mistral AI and Streamlit. It dynamically creates customized MCQs and conceptual Q&As.",
+    features: [],
+    tech: ["Python", "LangChain", "Mistral AI", "Streamlit"],
+    image: "assets/ui/quizgenie-ai.png", g: "linear-gradient(135deg,#047857,#0e7490)"
+  },
+  {
+    id: "lexilearn-ai", name: "LexiLearn AI", type: "AI",
+    live: "", repo: "https://github.com/amirsohail100/LexiLearn-AI",
+    keywords: ["language", "tutor", "duolingo", "learning", "llm", "mistral", "streamlit"],
+    top: false, tag: "GenAI · Language Tutor",
+    desc: "An interactive AI-powered language tutor inspired by Duolingo. Built with Streamlit and Mistral AI, it supports multi-language learning with dynamic difficulty levels.",
+    features: [],
+    tech: ["Python", "Streamlit", "Mistral AI"],
+    image: "assets/ui/lexilearn-ai.png", g: "linear-gradient(135deg,#4338ca,#7e22ce)"
+  },
+  {
+    id: "devsphere-ai-llm-studio", name: "DevSphere AI Dual-Mode LLM Studio", type: "AI",
+    live: "", repo: "https://github.com/amirsohail100/DevSphere-AI-Dual-Mode-Custom-LLM-Studio",
+    keywords: ["llm", "studio", "chatbot", "developer", "dual mode", "api"],
+    top: false, tag: "GenAI · LLM Studio",
+    desc: "A dual-mode LLM studio that addresses strict API restrictions and the lack of developer control in standard chatbots: a clean default AI chat for users, with deeper control for developers.",
+    features: [],
+    tech: ["Python", "LLMs"],
+    image: "assets/ui/devsphere-ai-llm-studio.png", g: "linear-gradient(135deg,#be123c,#9333ea)"
+  },
+  {
     id: "credit-risk-assessment-shap", name: "Credit Risk Assessment using SHAP", type: "ML",
     live: "", repo: "https://github.com/amirsohail100/Credit_Risk_Assesment_Using_SHAP",
     keywords: ["credit", "risk", "shap", "explainable", "notebook", "loan"],
@@ -126,6 +156,156 @@ const PROJECTS = [
     features: [],
     tech: ["Python", "GNN", "GCN", "Jupyter"],
     image: "assets/ui/gnn-gcn-cora-classification.png", g: "linear-gradient(135deg,#0369a1,#0891b2)"
+  },
+  {
+    id: "ai-fake-news-detector", name: "AI Fake News Detector", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/AI-Fake-News-Detector",
+    keywords: ["fake news", "nlp", "ann", "deep learning", "classification"],
+    top: false, tag: "Deep Learning · NLP",
+    desc: "A web application powered by a deep learning Artificial Neural Network (ANN) that analyzes news text and classifies it as real or fake, reaching 98% accuracy.",
+    features: [],
+    tech: ["Python", "ANN", "NLP", "Jupyter"],
+    image: "assets/ui/ai-fake-news-detector.png", g: "linear-gradient(135deg,#334155,#0f766e)"
+  },
+  {
+    id: "bank-telemarketing-prediction-ann", name: "Bank Telemarketing Success Prediction", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Bank-Telemarketing-Success-Prediction-using-ANN",
+    keywords: ["bank", "telemarketing", "ann", "deposit", "streamlit", "fastapi"],
+    top: false, tag: "Deep Learning · Prediction App",
+    desc: "An end-to-end deep learning application that uses an ANN to predict term deposit subscription (82% accuracy), with an interactive Streamlit frontend and a FastAPI backend with strict Pydantic validation.",
+    features: [],
+    tech: ["Python", "ANN", "Streamlit", "FastAPI", "Pydantic"],
+    image: "assets/ui/bank-telemarketing-prediction-ann.png", g: "linear-gradient(135deg,#0f766e,#1d4ed8)"
+  },
+  {
+    id: "ai-model-arena-rank-predictor", name: "AI Model Arena Rank Predictor", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/AI-Model-Arena-Rank-Predictor",
+    keywords: ["arena", "rank", "llm", "leaderboard", "streamlit", "prediction"],
+    top: false, tag: "Machine Learning · Streamlit App",
+    desc: "A Streamlit web application that forecasts AI model ranks from ratings, variance, vote counts, year and text descriptions. Built with Python and Scikit-Learn.",
+    features: [],
+    tech: ["Python", "Scikit-Learn", "Streamlit"],
+    image: "assets/ui/ai-model-arena-rank-predictor.png", g: "linear-gradient(135deg,#6d28d9,#db2777)"
+  },
+  {
+    id: "credit-card-fraud-detection", name: "Credit Card Fraud Detection System", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Credit-Card-Fraud-Detection-System",
+    keywords: ["fraud", "credit card", "classification", "xgboost", "random forest", "imbalanced"],
+    top: false, tag: "Machine Learning · Fraud Detection",
+    desc: "A high-accuracy machine learning project that evaluates multiple classifiers (Random Forest, Extra Trees, XGBoost, KNN), reaching up to 98% accuracy on credit card fraud data.",
+    features: [],
+    tech: ["Python", "Random Forest", "XGBoost", "KNN"],
+    image: "assets/ui/credit-card-fraud-detection.png", g: "linear-gradient(135deg,#0369a1,#0891b2)"
+  },
+  {
+    id: "air-passengers-prediction", name: "Air Passengers Prediction System", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Air-Passengers-Prediction-System",
+    keywords: ["air passengers", "forecast", "time series", "regression", "streamlit"],
+    top: false, tag: "Machine Learning · Forecasting",
+    desc: "An interactive machine learning web app built with Streamlit to forecast monthly air passengers, using a 98% accurate Gradient Boosting Regressor pipeline with robust preprocessing.",
+    features: [],
+    tech: ["Python", "Streamlit", "Gradient Boosting"],
+    image: "assets/ui/air-passengers-prediction.png", g: "linear-gradient(135deg,#b45309,#dc2626)"
+  },
+  {
+    id: "market-economic-predictor", name: "Market Economic Predictor App", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Market-Economic-Predictor-App",
+    keywords: ["stock", "market", "ihsg", "economy", "finance", "streamlit", "prediction"],
+    top: false, tag: "Machine Learning · Finance",
+    desc: "An interactive Streamlit web app that predicts the Indonesian Stock Market Index (IHSG) from global economic indicators such as gold, oil, S&P 500, VIX, CPI and interest rates.",
+    features: [],
+    tech: ["Python", "Streamlit", "Machine Learning"],
+    image: "assets/ui/market-economic-predictor.png", g: "linear-gradient(135deg,#047857,#0e7490)"
+  },
+  {
+    id: "mindpulse-ai-mental-health", name: "MindPulse AI Student Mental Health Predictor", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/MindPulse-AI-Student-Mental-Health-Prediction-Web-App",
+    keywords: ["mental health", "student", "wellbeing", "healthcare", "pipeline", "prediction"],
+    top: false, tag: "Machine Learning · Healthcare",
+    desc: "A production-grade ML web app that predicts student mental health scores from daily lifestyle habits, using a Scikit-learn Pipeline and ColumnTransformer.",
+    features: [],
+    tech: ["Python", "Scikit-learn", "Web App"],
+    image: "assets/ui/mindpulse-ai-mental-health.png", g: "linear-gradient(135deg,#4338ca,#7e22ce)"
+  },
+  {
+    id: "nyc-airbnb-ml-analytics", name: "NYC Airbnb ML Analytics", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/New-York-City-Airbnb-ML-Analytics-Web-App",
+    keywords: ["airbnb", "nyc", "listings", "random forest", "analytics", "price"],
+    top: false, tag: "Machine Learning · Analytics",
+    desc: "An NYC Airbnb machine learning pipeline that evaluates listings with Random Forest (85.1% accuracy) and ColumnTransformer preprocessing, with a web UI built in HTML, CSS and JavaScript.",
+    features: [],
+    tech: ["Python", "Random Forest", "FastAPI", "HTML", "CSS", "JavaScript"],
+    image: "assets/ui/nyc-airbnb-ml-analytics.png", g: "linear-gradient(135deg,#be123c,#9333ea)"
+  },
+  {
+    id: "telehealth-ai-voice-triage", name: "Telehealth AI Patient Voice Urgency Triage", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Telehealth-AI-Real-Time-Patient-Voice-Urgency-Triage",
+    keywords: ["telehealth", "voice", "triage", "healthcare", "ann", "audio"],
+    top: false, tag: "Deep Learning · Healthcare",
+    desc: "An advanced deep learning system powered by a 5-layer Artificial Neural Network (ANN) that analyzes vocal acoustics and speech features to triage patient urgency in real time.",
+    features: [],
+    tech: ["Python", "ANN", "Deep Learning"],
+    image: "assets/ui/telehealth-ai-voice-triage.png", g: "linear-gradient(135deg,#334155,#0f766e)"
+  },
+  {
+    id: "heart-disease-prediction-model", name: "Heart Disease Prediction Model", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Heart-Disease-Prediction-Model",
+    keywords: ["heart", "disease", "healthcare", "prediction", "supervised"],
+    top: false, tag: "Machine Learning · Healthcare",
+    desc: "A machine learning project with an automated pipeline that evaluates multiple supervised models and offers dual user interfaces.",
+    features: [],
+    tech: ["Python", "Machine Learning", "Jupyter"],
+    image: "assets/ui/heart-disease-prediction-model.png", g: "linear-gradient(135deg,#0f766e,#1d4ed8)"
+  },
+  {
+    id: "stroke-prediction-system", name: "Stroke Prediction System", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Stroke-Prediction-System",
+    keywords: ["stroke", "healthcare", "dashboard", "classification", "streamlit"],
+    top: false, tag: "Machine Learning · Healthcare",
+    desc: "An interactive Stroke Prediction dashboard built with Streamlit, driven by a Gradient Boosting Classifier with 93% accuracy that evaluates clinical inputs.",
+    features: [],
+    tech: ["Python", "Streamlit", "Gradient Boosting"],
+    image: "assets/ui/stroke-prediction-system.png", g: "linear-gradient(135deg,#6d28d9,#db2777)"
+  },
+  {
+    id: "diabetes-prediction-model", name: "Diabetes Prediction Model", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Diabetes-Prediction-Model",
+    keywords: ["diabetes", "healthcare", "prediction", "classification"],
+    top: false, tag: "Machine Learning · Healthcare",
+    desc: "A diabetes prediction model built in a Jupyter Notebook.",
+    features: [],
+    tech: ["Python", "Machine Learning", "Jupyter"],
+    image: "assets/ui/diabetes-prediction-model.png", g: "linear-gradient(135deg,#0369a1,#0891b2)"
+  },
+  {
+    id: "flipkart-review-sentiment-predictor", name: "Flipkart Review Sentiment Rating Predictor", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Flipkart-Product-Review-Sentiment-Rating-Predictor-NLP-",
+    keywords: ["flipkart", "review", "sentiment", "nlp", "rating", "reviews"],
+    top: false, tag: "NLP · Sentiment Analysis",
+    desc: "An end-to-end Flipkart product review rating predictor powered by NLP and an Extra Trees Classifier (83.2% test accuracy), with custom text preprocessing and TensorFlow Tokenizer sequence padding.",
+    features: [],
+    tech: ["Python", "NLP", "Extra Trees", "TensorFlow"],
+    image: "assets/ui/flipkart-review-sentiment-predictor.png", g: "linear-gradient(135deg,#b45309,#dc2626)"
+  },
+  {
+    id: "email-spam-detection-nlp", name: "Email Spam Detection NLP", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/Email-Spam-Detection-NLP",
+    keywords: ["spam", "email", "nlp", "stacking", "classification"],
+    top: false, tag: "NLP · Classification",
+    desc: "An advanced NLP email spam detection system achieving 98% accuracy, using a Stacking Classifier ensemble that combines Logistic Regression, MultinomialNB and Decision Trees.",
+    features: [],
+    tech: ["Python", "NLP", "Scikit-learn"],
+    image: "assets/ui/email-spam-detection-nlp.png", g: "linear-gradient(135deg,#047857,#0e7490)"
+  },
+  {
+    id: "ai-vs-human-text-detection-lstm", name: "AI vs Human Text Detection (LSTM)", type: "ML",
+    live: "", repo: "https://github.com/amirsohail100/AI-vs-Human-Text-Detection-using-Deep-Learning-LSTM-",
+    keywords: ["ai detection", "text", "lstm", "deep learning", "nlp", "classification"],
+    top: false, tag: "Deep Learning · NLP",
+    desc: "An AI vs human text classifier powered by deep learning (LSTM) with 98% accuracy, with full preprocessing, Keras (.h5) and TFLite model exports, a tokenizer pipeline and an interactive web app.",
+    features: [],
+    tech: ["Python", "LSTM", "Keras", "TFLite"],
+    image: "assets/ui/ai-vs-human-text-detection-lstm.png", g: "linear-gradient(135deg,#4338ca,#7e22ce)"
   },
   {
     id: "notosan-smooth-scroll-parallax", name: "Notosan Smooth Scroll Parallax", type: "Web",
@@ -246,6 +426,106 @@ const PROJECTS = [
     features: [],
     tech: ["Python"],
     image: "assets/ui/commits-bot.png", g: "linear-gradient(135deg,#be123c,#9333ea)"
+  },
+  {
+    id: "discord-music-bot", name: "Discord Music Bot", type: "Tool",
+    live: "", repo: "https://github.com/amirsohail100/Discord-Music-Bot",
+    keywords: ["discord", "music", "bot", "youtube", "yt-dlp"],
+    top: false, tag: "Python · Discord Bot",
+    desc: "A complete Discord music bot template with a Python backend, dependency configuration and step-by-step PDF/Markdown setup guides, with YouTube audio streaming via yt-dlp.",
+    features: [],
+    tech: ["Python", "Discord", "yt-dlp"],
+    image: "assets/ui/discord-music-bot.png", g: "linear-gradient(135deg,#be123c,#9333ea)"
+  },
+  {
+    id: "github-graph-fix", name: "GitHub Graph Fix", type: "Tool",
+    live: "", repo: "https://github.com/amirsohail100/github-graph-fix",
+    keywords: ["github", "contribution", "graph", "automation"],
+    top: false, tag: "Python · Automation",
+    desc: "A Python tool for working with the GitHub contribution graph.",
+    features: [],
+    tech: ["Python"],
+    image: "assets/ui/github-graph-fix.png", g: "linear-gradient(135deg,#334155,#0f766e)"
+  },
+  {
+    id: "todo-list-application", name: "Todo List Application", type: "Web",
+    live: "", repo: "https://github.com/amirsohail100/Todo-List-Application",
+    keywords: ["todo", "tasks", "utility"],
+    top: false, tag: "Web · Utility",
+    desc: "A to-do list application built with HTML and CSS.",
+    features: [],
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: "assets/ui/todo-list-application.png", g: "linear-gradient(135deg,#0f766e,#1d4ed8)"
+  },
+  {
+    id: "flipkart-clone", name: "Flipkart Clone", type: "Web",
+    live: "", repo: "https://github.com/amirsohail100/Flipkart-clone",
+    keywords: ["flipkart", "ecommerce", "clone", "shopping"],
+    top: false, tag: "Web · E-commerce UI",
+    desc: "A Flipkart e-commerce website clone built with HTML.",
+    features: [],
+    tech: ["HTML", "CSS"],
+    image: "assets/ui/flipkart-clone.png", g: "linear-gradient(135deg,#6d28d9,#db2777)"
+  },
+  {
+    id: "weather-app", name: "Weather App", type: "Web",
+    live: "", repo: "https://github.com/amirsohail100/HTML_CSS_JS_Weather_App",
+    keywords: ["weather", "api", "glassmorphism", "openweathermap", "forecast"],
+    top: false, tag: "Web · API App",
+    desc: "A real-time dynamic weather application built with HTML, CSS and JavaScript that fetches live global weather data from the OpenWeatherMap API, with a glassmorphism UI and theme customization.",
+    features: [],
+    tech: ["HTML", "CSS", "JavaScript", "OpenWeatherMap API"],
+    image: "assets/ui/weather-app.png", g: "linear-gradient(135deg,#0369a1,#0891b2)"
+  },
+  {
+    id: "3d-solar-system", name: "3D Solar System", type: "Web",
+    live: "", repo: "https://github.com/amirsohail100/3D-Solar-System",
+    keywords: ["3d", "solar system", "space", "animation"],
+    top: false, tag: "Web · 3D",
+    desc: "A 3D solar system built with JavaScript.",
+    features: [],
+    tech: ["JavaScript", "3D"],
+    image: "assets/ui/3d-solar-system.png", g: "linear-gradient(135deg,#b45309,#dc2626)"
+  },
+  {
+    id: "3d-portfolio", name: "3D Portfolio", type: "Web",
+    live: "", repo: "https://github.com/amirsohail100/3D_Portfolio",
+    keywords: ["3d", "portfolio", "website"],
+    top: false, tag: "Web · 3D Portfolio",
+    desc: "A 3D portfolio website built with JavaScript.",
+    features: [],
+    tech: ["JavaScript", "3D"],
+    image: "assets/ui/3d-portfolio.png", g: "linear-gradient(135deg,#047857,#0e7490)"
+  },
+  {
+    id: "team-invitation", name: "Team Invitation", type: "Web",
+    live: "", repo: "https://github.com/amirsohail100/Team-Invitation",
+    keywords: ["team", "invitation", "landing page"],
+    top: false, tag: "Web · Landing Page",
+    desc: "A team invitation page built with JavaScript.",
+    features: [],
+    tech: ["JavaScript"],
+    image: "assets/ui/team-invitation.png", g: "linear-gradient(135deg,#4338ca,#7e22ce)"
+  },
+  {
+    id: "lemon-soda-limonata-italiana", name: "Lemon Soda Originale Limonata Italiana", type: "Web",
+    live: "", repo: "https://github.com/amirsohail100/LEMON-SODA-Originale-Limonata-Italiana",
+    keywords: ["lemon", "soda", "limonata", "landing page", "product"],
+    top: false, tag: "Web · Landing Page",
+    desc: "A product landing page for an Italian lemon soda, built with HTML.",
+    features: [],
+    tech: ["HTML", "CSS"],
+    image: "assets/ui/lemon-soda-limonata-italiana.png", g: "linear-gradient(135deg,#be123c,#9333ea)"
+  },
+  {
+    id: "spaceedu-hero", name: "Spaceedu Hero", type: "Web",
+    live: "", repo: "https://github.com/amirsohail100/Spaceedu-hero",
+    keywords: ["spaceedu", "hero", "education", "landing page"],
+    top: false, tag: "Web · Hero Section",
+    desc: "A hero section for an education website, built with HTML and CSS.",
+    features: [],
+    tech: ["HTML", "CSS"],
+    image: "assets/ui/spaceedu-hero.png", g: "linear-gradient(135deg,#334155,#0f766e)"
   },
   {
     id: "catch-the-square-hd", name: "Catch the Square HD Edition", type: "Game",
