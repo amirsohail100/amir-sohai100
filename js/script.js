@@ -33,7 +33,7 @@ const chips = a => (a || []).map(t => `<span class="chip">${t}</span>`).join("")
 const detail = p => `${ROOT}pages/project.html?id=${encodeURIComponent(p.id)}`;
 const links = p => `<div class="links"><a class="btn ghost" href="${detail(p)}">Details</a>${p.live ? `<a class="btn" href="${p.live}" target="_blank" rel="noopener">Live demo</a>` : ""}${p.repo ? `<a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener">Source code</a>` : ""}</div>`;
 const ph = n => `<div class="ph">${n}</div>`;
-const shotInner = p => p.image ? `<img src="${ROOT}${p.image}" alt="${p.name} screenshot" loading="lazy">` : ph(p.name);
+const shotInner = p => `<div class="win"><div class="bar"><i></i><i></i><i></i></div>${p.image ? `<img src="${ROOT}${p.image}" alt="${p.name} screenshot" loading="lazy">` : ph(p.name)}</div>`;
 const shot = p => `<a class="shot" href="${detail(p)}" style="--g:${p.g}" aria-label="${p.name}">${shotInner(p)}</a>`;
 /* if a project image or logo fails to load: placeholder for images, text-only (or fallback slug) for logos */
 document.addEventListener("error", e => {
